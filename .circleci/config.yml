@@ -40,9 +40,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: yarn test
+      - run: yarn main
       - store_test_results:
-          path: test-results
+          path: main-results
 
   publish:
     <<: *defaults
@@ -61,7 +61,7 @@ workflows:
       - prepare
       - build:
           requires:
-            - test
+            - main
       - test:
           requires:
             - prepare

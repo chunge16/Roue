@@ -8,12 +8,12 @@ module.exports = Object.assign({}, base, {
         index: './example.tsx'
     },
     output: {
-        path: path.resolve(__dirname, 'dist/doc'),
+        path: path.resolve(__dirname, 'pub'),
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title:'Roue',
-            template: 'example.html'
+            title:'卡',
+            template: 'src/main/index.html'
         })
     ],
 })
